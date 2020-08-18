@@ -18,3 +18,10 @@ variable prefix precedence
 * Form Fields
 * CLient
 ```
+#### Conditional operators 
+![CFML cond](cond_cfml.png)
+
+#### Functions/ methods 
+
+isDefined('var') -> check if var exists.  
+(url.SampleVar) -> looks for 'sampleVar' in url 
