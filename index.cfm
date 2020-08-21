@@ -58,14 +58,20 @@
   
     <cfif name2 EQ 'Qasim'>
       #name2# eqal 'Qasim'
+    <cfelseif isDefined('url.month') EQ TRUE AND (url.month GT 1 AND url.month LT 11)>
+      'Come on man selct a better month something above #url.month#' 
     <cfelse><br>
-      #name2# not eqaul to #name1#
-    </cfif><br>
+      Good month choise #MonthAsString(url.month)#     <br>
+      also #name2# not eqaul to #name1#
+    </cfif><br> 
+    <cfloop condition="url.month lt 13">
+      Months left : #url.month# <br>
+  <cfset url.month++>
+    </cfloop>
   
   
+  </cfoutput> 
   
-  
-  </cfoutput>
   
   
   
