@@ -82,7 +82,7 @@
 
   <cfquery name ='Cf_Query' datasource='NjiTestSQLSrvr'>
 
-  Select top 10 * from sales.orders;
+  Select top 1 * from sales.orders;
 
   </cfquery>
   <cfdump var="#Cf_Query#">"
@@ -93,6 +93,29 @@
   </h2>
   <br>
  
-  FIRST CUSTOMER ID : #Cf_Query.customer_id#
-  SIXTH CUSTOMER ID : #Cf_Query.customer_id[7]#
+  FIRST CUSTOMER ID : #Cf_Query.customer_id#  <br>
+  SIXTH CUSTOMER ID : #Cf_Query.customer_id[7]#<br>
 </cfoutput>
+
+<!--- 
+  <cfoutput query="Cf_Query" group='STAFF_ID'> 
+  -------------------------------------- <br>
+  CUSTOMER ID : #Cf_Query.customer_id#<br>
+  ORDER STATUS : #Cf_Query.STAFF_ID# <br>
+  RECORD COUT : #Cf_Query.RecordCount#<br>
+</cfoutput>
+
+--->
+<h1> 
+  Data driven pages. 
+</h1>
+
+<h2> 
+Login sample using first name and ZipCode from db
+</h2>
+
+<form method='post' action='logincheck.cfm'> 
+  <B> USERNAME : <B> <INPUT type ='text' size='19' name='Username'>  <BR>
+  <B> PASSWORD : <B> <INPUT type ='password' size='19' name='Password'> <BR>
+  <INPUT type='submit' name='login' value='Login'>
+</form>

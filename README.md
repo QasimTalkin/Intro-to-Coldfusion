@@ -62,3 +62,17 @@ Set up DB
 Install SSMS and connect 
 
 ![ssms_login](ssms_login.png)
+
+## Application.cfm 
+Always called before any other page in CF 
+- declare all global var here 
+- one file to use everywhere 
+- for example a DB to use with every other page -> `<cfset datasource = 'Products'>` just have to change Products if need to change DG
+- calling up header -> `<cfinlude template = 'haeder.cfm>`
+## onRequestEnd.cfm
+- auto executes towards the end of cfm
+
+## CF work flow
+![cf loading workflow](cf_flow.png)
+
+<cfinclude template='aaa.cfm'> -> loads the page.  
